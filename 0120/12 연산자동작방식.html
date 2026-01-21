@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>연산자 동자 방식</title>
+</head>
+<body>
+  <h2>자바스크립트 + 연산자 동작 규칙</h2>
+  <p>개발자도(f12 -> console)에서 결과를 확인하세요.</p>
+
+  <script>
+    //문자열 + 문자열 -> 문자열 연결
+    let firstName = "자바스크립트";
+    let lastName = "웹표준";
+    let fullName = "firstName + lastName"
+    console.log("문자열 + 문자열 =", fullName);
+    // 결과: "자바스크립트웹표준"
+    
+   //2. 숫자 + 문자열 -> 숫자를 문자열로 변환 후 연결
+    let n1 =4;
+    let priceText = "10000"
+
+    let c = n1 + priceText;
+    console.log("숫자 + 문자열=", c);
+
+    let d = priceText + n1;
+    console.log("문자열 + 숫자 =", d);
+
+    let a = 10;
+    let b = 20;
+    let sum = a + b;
+    console.log("숫자 + 숫자=", sum);
+    
+  </script>
+</body>
+</html>

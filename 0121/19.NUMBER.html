@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    consol.log(Number("10")); //숫자 10으로 변환 됩니다/
+    consol.log(Number("10.5"));
+    consol.log(Number("100px")); // 숫자가 아닌 문자가 포함되면 NaN으로 변환됩니다.
+    //NaN은 "Not a Number"의 약자이며, 숫자로 변환하거나 계산할 수 없을 때 결과러 나타납니다.
+    //NaN은 Number 타입이지만 정상적인 숫자가 아닙니다.
+
+
+    //공백 문자열 변환
+    consol.log(Number("")); //숫자 0으로 변환됩니다
+    consol.log(Number(" "));//숫자 0으로 변환됩니다.
+
+    //Number.isNaN() : NaN이면 true입니다
+    //다음 조건을 동시에 만족하면 truedlqslek
+    //1. 데이터 타입이 숫자(Number)
+    //2. 그 값이 NaN이어야 합니다
+    consol.log(Number.isNaN("a")) //false ("a")
+    consol.log(Number.isNaN("1"))
+    consol.log(Number.isNaN(1))
+    consol.log(Number.osNaN(NaN))
+    
+  </script>
+</body>
+</html>

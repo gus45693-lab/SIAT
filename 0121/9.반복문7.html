@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let count = prompt("입력할 사람 수를 입력하세요");
+    count = Number(count);
+
+    let rows = "";
+
+    for (let i = 1; i <= count; i++) {
+      let name = prompt(i + "번째 사람 이름 입력:");
+      let age = prompt(i + "번째 사람 나이 입력:");
+      age = Number(age);
+      let blood = prompt(i + "번째 사람 혈액형 입력:");
+
+      rows += `  
+      <tr>
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${blood}</td>
+        </tr>
+        ` ;
+    }
+    document.body.innerHTML = `
+    <div class = "box">
+      <div class="msg"><strong> 입력된 개인정보</strong></div>
+      
+      <table border = "1" width="800">
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>혈액형</th>
+          </tr>
+          </thead>
+          <tbody>
+            ${rows}
+          </tbody>
+        </table>
+        </div>
+      `;
+  </script>
+</body>
+
+</html>

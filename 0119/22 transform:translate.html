@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>transform(변환):translate2</title>
+ <style>
+  div{
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background: salmon;
+    transition: transform 5s ease-in-out; /* 5초 동안 천천히시작-> 중간 가속-> 천천히 종료0*/
+  }
+  #translate:hover{
+    transform: translateX(500px);
+  }
+ </style>
+</head>
+<body>
+  <h3>다양한 transform</h3>
+  아래는 이동(translate)이 적용됩니다
+  도한 마우스를 올리면 추가적 변환이 일어납니다
+  <hr>
+  <div id="translate">translateX(500px)</div>
+
+ 
+
+</body>
+</html>

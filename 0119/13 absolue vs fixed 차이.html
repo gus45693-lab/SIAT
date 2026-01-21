@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+ <style>
+  div{
+    height: 120px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+  }
+
+  #absbox{
+    position: absolute;
+    left: 30px;
+    top: 70px;
+    background: red;
+  }
+
+  #fixedBox{
+    position: fixed;
+    right: 30px;
+    top: 70px;
+    background: blue;
+  }
+ </style>
+</head>
+<body>
+  <h3 style="padding: 20px;">스크롤을 내려보세요</h3>
+
+  <div id="absBox">ABSOLUTE<br>viewport 좌상단을 기준으로 배치<br>스크롤을 내리면 화면 밖으로 사라짐</div>
+<div id="fixedBox">FIXED<br>viewport 좌상단을 기준으로 배치<br>스크롤을 내려도 항상 화면에 고정<br>화면에 있는 붙어 있는 요소</div>
+</body>
+</html>

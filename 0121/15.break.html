@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    let output = "";
+    for (let i = 1; i <= 10; i++) {
+      output += `${i}<hr>`
+      if(i == 4){
+        break;        //break는 현재 실행 중인 가장 안쪽 반복문(for, while 등)을 즉시 종료합니다
+      }               //따라서 i가 4가 되면 반복문이 중단되고 이후 반복은 실행되지 않습니다
+    }
+    document.body.innerHTML = output;
+  </script>
+</body>
+</html>

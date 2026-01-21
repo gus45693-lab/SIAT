@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 카드 폼</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+      background-color: whitesmoke;
+      color:black; 
+      font-family: Arial, sans-self;
+    }
+
+  .wrap{
+    width: 420px;
+  }
+  .card{
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px lightgray;
+  }
+
+  .card-header{
+    padding:22px 22px 16px;
+    background-color: rgb(53, 193, 177);
+    color: white;
+  }
+  .card-header h1{ 
+    font-size: 20px;
+  }
+
+  .card-body{
+    padding: 20px 22px 22px;
+  }
+  .field{
+    margin-bottom:14px;
+  }
+  .input{
+    width:100%;
+    padding: 14px;
+    border: 1px solid gainsboro;
+    border-radius: 12px;
+    outline: none;
+    display: block;
+    background-color: white;
+  }
+  .input:focus{
+    border-color:steelblue;
+    box-shadow: 0 0 0 4px lightsteelblue;
+  }
+  .row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 14px;
+  }
+  .check{
+    color: dimgray;
+    display: inline-block;
+  }
+  .check input{
+    margin-right: 6px;
+  }
+  .link:link, .card-footer a:link{
+    color:steelblue;
+    text-decoration: none;
+  }
+  .link:visited,.card-footer a:visited{
+    color: steelblue; text-decoration: none;
+  }
+  .link{
+    font-size: 13px;
+  }
+  .link::after,.card-footer a::after{
+    content:"";
+    display: block;
+    height: 2px;
+    background-color: steelblue;
+    margin-top: 2px;
+    width: 0;
+  }
+
+  .link:hover::after,.card-footer a:hover::after{
+    width: 100%;
+  }
+
+  .link:hover, .card-footer a:hover{
+    color: steelblue;
+  }
+
+  .btn{
+    width: 100%;
+    padding: 14px 0;
+    border:none;
+    border-radius: 12px;
+    background-color: steelblue;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+    display:block;
+  }
+  .btn:hover{
+    opacity: 0.8;
+  }
+  .card-footer{
+    border-top: 1px solid gainsboro;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 16px 22px;
+    color: dimgray;
+  }
+  .card-footer a{
+    font-weight: bold;
+  }
+  </style>
+  <link href="login.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <section class="card" aria-label="로그인 카드">
+      <header class="card-header">
+        <h1>로그인</h1>
+      </header>
+
+      <form class="card-body" action="#" method="post">
+        <div class="field">
+          <input class="input" id="userId" name="userId" type="text" placeholder="아이디를 입력하세요" required >
+        </div>
+
+        <div class="field">
+          <input class="input" id="userPw" name="userPw" type="password" placeholder="비밀번호를 입력하세요" required >
+        </div>
+
+        <div class="row">
+          <label class="check">
+            <input type="checkbox" name="remember" >
+            로그인 유지
+          </label>
+          <a class="link" href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+
+        <button class="btn" type="submit">로그인</button>
+
+      </form>
+
+      <footer class="card-footer">
+        아직 계정이 없으신가요? <a href="#">회원가입</a>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

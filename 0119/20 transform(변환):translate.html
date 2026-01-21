@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>transform(변환):translate</title>
+ <!-- translate() 함수는 요소를 수평(x축) 및 수직(y축) 방향으로 이동시킨다
+      translateX() 함수는 요소를 X축 방향(수평방향)으로 이동 시킨다 -->
+ <style>
+  div{
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    background: olivedrab;
+    transition: transform 5s linear; /* 5초 동안 처음부터 끝까지 일정한 속도0*/
+  }
+  #translate:hover{
+    /* 태그를 X축으로 500px 만큼 이동*/
+    transform: translateX(500px);
+  }
+ </style>
+</head>
+<body>
+  <h3>다양한 transform</h3>
+  아래는 이동(translate)이 적용됩니다
+  도한 마우스를 올리면 추가적 변환이 일어납니다
+  <hr>
+  <div id="translate">translateX(500px)</div>
+
+ 
+
+</body>
+</html>

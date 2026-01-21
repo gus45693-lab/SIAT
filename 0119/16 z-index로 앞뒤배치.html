@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+ <style>
+  body > div{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border: 4px solid black;
+    
+  }
+  #box1, #box2, #box3 {
+    position:absolute;
+    width: 100px;
+    height: 100px;
+  }
+  #box1{
+    background-color: red;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    z-index: 3;
+  }
+  #box2{
+    background-color: green;
+    position: absolute;
+    left: 90px;
+    top: 80px;
+    z-index: 2;
+  }
+
+  #box3{
+    background-color: blue;
+    position: absolute;
+    left: 140px;
+    top: 130px;
+    z-index: 1;
+  }
+ </style>
+</head>
+<body>
+    <h1>저는 h1태그 입니다.</h1>
+    <div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+    <h1>저는 h1태그 입니다.</h1>
+</body>
+</html>

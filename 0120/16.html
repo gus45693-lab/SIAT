@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>자바스크립트 논리 연산자</title>
+ <script>
+  let a = true;
+  let b = false;
+
+  console.log(a && b);
+  console.log(a || b);
+  console.log(!a);
+
+
+
+  // ! 연산자는 값을 Boolean으로 변환한 뒤 반전합니다.
+  // 숫자 0은 Falsy -> Boolean(0)은 false -> !false -> true
+  console.log(!0);
+  
+  console.log(!1)  // !true => false
+  console.log(!10) // !true => false
+
+  // 논리 연산자를 이용한 실제 반환값 예제
+  // && 연산자는 앞 값이 Falsy이면 그 값을 바로 반환하고, Truthy이면 뒤 값을 평가하여 반환합니다.
+  console.log(0 && 10);  //0
+  console.log(10 && 20);  //20
+
+  // ||연산자는 앞 값이 Truthy이면 그 값을 바로 반환하고, Falsy이면 뒤 값을 평가하여 반환합니다.
+  console.log(0 || 10); // 10
+  console.log(100 || 10); // 100
+
+  console.log("" || "hi");
+
+  let input;
+  let userName = input || "손님";
+  console.log(userName)
+ </script>
+</head>
+<body>
+</body>
+</html>

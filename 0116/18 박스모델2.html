@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>박스 모델(Box Model): box-sizing:content-box</title>
+ <style>
+  body{margin: 0;}
+  .box{box-sizing: content-box; font-size: 27px; color: black;}
+  #first {background-color: red; }
+  #second{background-color: orange; width:100px; height: 100px; }
+  #third {background-color: yellow; width: 100px; height: 100px; padding: 20px};
+  #third_clip
+  #fourth,
+  #fifth {margin-top: 10px; font-size: 27px;}
+
+  /* padding(내부여백), margin(외부여백)은 위, 오른쪽, 아래, 왼쪽 4가지의 값을 갖는다.
+     예) padding의  값을 위 오른쪽 아래 왼쪽 모두 10px 적용하려면
+         padding: 10px 10px 10px 10px;
+        또는 
+         padding: 10px작성한다.
+        또는
+          padding-top:10px;  padding-right:10px;
+          padding-bottom:10px; padding-legt:10px
+          
+     2예) padding-top:10px 5px;
+         의미) 위,아래는 10px이 적용되고 오근쪽,왼쪽은 5px이 적용된다₩*/
+
+ </style>
+</head>
+<body>
+  <div id="first">first</div>
+  <div id="second">second</div>
+  <div id="third">third</div>
+  <div id="third_clip">third_clip</div>
+  <div id="fourth">fourth</div>
+  <div id="fifth">fifth</div>
+  <div id=""></div>
+</body>
+</html>

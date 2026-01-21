@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let output = "";
+    let output2 ="";
+    let sum = 0;
+    for (let i = 10; i >= 2; i -= 2) {
+      output += `${i}`;
+      output2 += `${i}<hr>`;
+
+      sum += i;
+
+      if (i > 2) {  // 깔끔하게 보이게 하기 위해서 _ 
+      // 조건에 따라 +를 붙힐지 말지 그래서 지금 조건은 2보다 크면 +를 붙히는 거여서 2뒤는 +가 붙혀지지 않았다.
+        output += " + ";
+      }
+    }
+    output += " = " + sum + "입니다";
+    document.body.innerHTML = output2 + output;
+  </script>
+</body>
+
+</html>

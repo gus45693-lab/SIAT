@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>표의 레이아웃 지정5</title>
+ <style>
+
+  /*margin:0.5em에서 em단위는 "현재 요소의 font-size"를 기준으로 계산됩니다.
+           현재 font-size: 14px; 이므로 margindms 7px이 됩니다.
+           만약 font*/
+  #books caption {font-size: 14px; font-weight: bold; margin:0.5em;}
+
+  #books {border-collapse: collapse; width: 500px; margin: 0 auto; text-align: center;}
+  #books th {background-color: gray; color:white}
+
+  td{border-bottom: 1px solid gray; height: 2em;}
+
+  th {background: gray; color: white; height: 2em;}
+
+  tbody tr:hover{background: lightgray;}
+
+  
+
+  
+ </style>
+</head>
+<body>
+  <table id="books">
+    <caption>추천 도서 테이블</caption>
+    <thead>
+      <tr>
+        <th>작가</th> <th>책 제목</th> <th>출판사</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>윌터아이작슨</td> <td>스티브잡스</td> <td>민음사</td>
+      </tr>
+      <tr>
+        <td>흥부와 놀부</td> <td>선과 악</td> <td>좋은출판사</td>
+      </tr>
+      <tr>
+        <td>괴테</td> <td>파우스트</td> <td>교학사</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

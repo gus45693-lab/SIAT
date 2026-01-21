@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>위치 크기 지정 속성6</title>
+ <style>
+    div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgray;
+    background-color: red;
+  }
+
+  #box1:hover{
+    position: relative;/* 상대위치 */
+    left: 30px ; /*원래 위치 기준에서 오른쪽으로 30px 이동*/
+    top :50px; /* 원래 위치 기준에서 아래쪽으로 50px 이동*/
+    background-color: green;
+  }
+
+  #box2:hover{
+    poistion : relative; 
+    right: 20px;
+    bottom: 20px;
+    background-color: yellow;
+  }
+
+
+ </style>
+</head>
+<body>
+  <h3>상대위치</h3>
+  <div></div>
+  <div></div>
+  <div id="box1"></div>
+  <div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>텍스트 입력예제 2</title>
+</head>
+<body>
+  <h3>문자열, 암호 입력 및 텍스트 영역</h3>
+  <form method="get" action="result.html"> <!-- post는 서버가 있어야 동작가능함!-->
+    아이디 : &nbsp;
+    <input type="text" value="아이디를 입력하시오" name="id"> <br>
+    비밀번호 :
+    <input type="text" value="비밀번호를 입력하시오" name="pwd" maxlength="3"> <br>
+    보이냐:<input type="hidden" name="hide" value="보이냐?!"> <br>
+    <input type="submit" value="회원가입">
+
+  </form>
+ </body>
+ </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>while문 기본 예제</title>
+</head>
+
+<body>
+
+  <script>
+    let i = 1 ;               // 초기값
+    let output =  "";
+    
+    do{
+      output += `${i}<hr>`;
+      i++;            // 증감식
+    }
+    while (i <= 5);   // 조건식
+    document.body.innerHTML = output;
+  </script>
+
+</body>
+
+</html>

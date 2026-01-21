@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let peoplecount = Number(prompt("입력할 사람 수를 입력하세요"));
+
+    let table = `
+    <h2> 입력된 개인정보</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>혈액형</th>
+        </tr>
+        </thead>
+        <tbody>
+    `;
+
+    for (let i = 1; i <= peopleCount; i++) {
+      let name = prompt(`${i}번째 사람 이름 입력:`)
+      let age = prompt(`${i}번째 사람 나이 입력:`)
+      let blood = prompt(`${i}번째 사람 혈액형 입력:`)
+
+      table += `
+      <tr>
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>${blood}</td>
+      </tr>
+   `;
+  }
+
+    table += `</tbody> </table>`;
+    document.body.innerHTML = table;
+  </script>
+</body>
+
+</html>

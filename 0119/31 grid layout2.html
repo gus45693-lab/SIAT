@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #2196f3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+ </style>
+</head>
+<body>
+
+  <h1>Grid Elements</h1>
+
+  <ul>
+    <li>CSS grid는 웹 페이지 전체 구조를 설계하기 위한 2차원 레이앗 시스템입니다</li>
+    <li>그리드 레이아웃에는 display 속성이 grid 또는 inline-grid로 설정된 부모 요소가 있어야 합니다</li>
+    <li>grid-template-columns:값 값 값;</li>
+    <li>값의 개수 = 열의 개수</li>
+    <li>grid-template-columns:1fr 1fr 1fr; 남은 공간을 1:1:1: 비율로 나눈다</li>
+  </ul>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div>
+</body>
+</html>

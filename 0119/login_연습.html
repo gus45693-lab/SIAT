@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 카드 폼</title>
+  <link href="login.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <section class="card" aria-label="로그인 카드">
+      <header class="card-header">
+        <h1>로그인</h1>
+      </header>
+
+      <form class="card-body" action="#" method="post">
+        <div class="field">
+          <input class="input" id="userId" name="userId" type="text" placeholder="아이디를 입력하세요" required >
+        </div>
+
+        <div class="field">
+          <input class="input" id="userPw" name="userPw" type="password" placeholder="비밀번호를 입력하세요" required >
+        </div>
+
+        <div class="row">
+          <label class="check">
+            <input type="checkbox" name="remember" >
+            로그인 유지
+          </label>
+          <a class="link" href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+
+        <button class="btn" type="submit">로그인</button>
+
+      </form>
+
+      <footer class="card-footer">
+        아직 계정이 없으신가요? <a href="#">회원가입</a>
+      </footer>
+    </section>
+  </div>
+</body>
+</html>

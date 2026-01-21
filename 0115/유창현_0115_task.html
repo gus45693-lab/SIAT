@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>과제임</title>
+</head>
+<body>
+  <h1>다양한 폼 입력</h1>
+  <form action="result.html">
+    성명:
+    <input type="text" name="name"> <br>
+  
+  
+    <p>성별:
+      <input type="radio" name="gender" value="male" checked>남성
+      <input type="radio" name="gender" value="female">여성 <br>
+    </p>
+
+    <p>과목:
+      <select name="subject" size="1">
+        <option value="html" selected> html</option>
+        <option value="C"> C언어</option>
+        <option value="java"> java </option>
+        <option value="python"> 파이썬 </option]>
+      </select>
+    </p>
+
+    
+    <p>구입희망분야(복수선택가능)
+    <input type="checkbox" name="hope" value="computer"> 컴퓨터
+    <input type="checkbox" name="hope" value="economy"> 경제
+    <input type="checkbox" name="hope" value="common"> 상식
+    </p>
+
+    <li>
+      <label for="note">비고:</label>
+<br>
+
+<textarea cols="40" rows="4">
+나는 <textarea> 입니다. 속성은 rows="4" cols="40"입니다
+</textarea>     
+<br>
+
+<textarea cols="40" rows="4">
+  나는 <textarea> 입니다.
+          속성은 rows="4" cols="40"입니
+  다
+</textarea>      
+<br>
+ 
+
+<br>
+      <textarea cols="40" rows="4">
+나는 <textarea> 입니다.
+            속성은 rows="4" cols="40"입니
+        다
+      </textarea>
+<br>    
+      <textarea cols="40" rows="4">
+        나는 <textarea> 입니다.
+                속성은 rows="4" cols="40"입니
+        다
+      </textarea>
+<br>    
+
+      <textarea cols="40" rows="4">나는 <textarea> 입니다.
+속성은 rows="4" cols="40"입니다.</textarea>
+    </li>
+  </form>
+
+  <form method="get" action="result.html">
+    파일 업로드하기(확장자 "png"인 파일만 보입니다)<br>
+    <p><input type="file" name="png"></p>
+    <hr>
+    <input type="submit" value="전송">
+    <input type="reset" value="취소">
+
+  </form>
+
+  
+
+ 
+
+</body>
+</html>

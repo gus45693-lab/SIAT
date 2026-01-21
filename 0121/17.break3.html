@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    let output = "";
+
+
+    outer:  // 레이블(label). 바깥쪽 반복문에 이름을 붙입니다.
+    for (let i = 1; i <= 9; i++) {
+      for (let dan = 2; dan <=9; dan++) {
+        if( i === 3 && dan ===3) {
+          break outer; // outer 레이블 반복문 까지 탈출 
+        }
+        output += `i=${i}, dan=${dan}<br>`
+      }
+      output += '<hr>'
+    }
+
+    document.body.innerHTML = output;
+  </script>
+</body>
+</html>

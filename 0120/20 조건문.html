@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    /*
+    출력할 HTML 내용을 문자열로 누적하기 위한 변수
+    */
+    let output = "",;
+
+    /*
+    점수변수
+    */
+    let score = 75;
+
+    /* ===============
+       1.if문
+       조건이 참일 때만 실행
+    ====================*/
+    if(score <= 60){
+      output += "<p>if문 결과: 합격입니다.</p>";
+    }
+
+
+    /*========================
+      2.if - elseans
+       조건이 참 / 거짓일 때 분기
+       =======================*/
+    if (score >= 80) {
+      output += "<p>if-else문 결과: 우수한 성적입니다.</p>";
+    } else {
+      output += "<p>if-else문 결과: 좀 더 노력하세요</p>";
+    }
+
+    /*======================
+      3.Truthy / False
+        조건식에서 값의 참 / 거짓 판별
+        =====================*/
+    let input = "";
+
+    if (input) {
+      output += "<p>Truthy/Falsy 결과 : 입력값이 있습니다</p>";
+    } else {
+      output += "<p>Truthy/Falsy 결과: 입력값이 없습니다.</p>";
+    }
+
+    /*
+    누적된 HTML 문자열을 body에 출력
+    */
+    document.body.innerHTML = output;
+  </script>
+</body>
+</html>

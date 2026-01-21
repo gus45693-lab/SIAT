@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+        /* prompt() 함수는 사용자로부터 값을 입력받는 대화상자를 표시합니다.
+      
+      1. 형식
+         result = prompt()
+         result = prompt(message)
+         result = prompt(message, defaultValue)
+         
+      2. 반환값(result)
+         - 사용자가 입력한 값은 항상 문자열(string)로 반환됩니다.
+         - [취소] 버튼을 누르면 null이 반환됩니다.
+         
+      3. 매개변수
+        message : 대화상자에 표시할 안내 문구입니다
+        defaultValue : 입력창에 미리 표시할 기본값입니다.
+        
+        - 숫자를 입력해도 문자열 형태로 반환되므로, 
+          숫자 연산이 필요하면 number() 변환이 필요합니다*/
+
+  let answer = prompt("주소를 입력하세요", "서울시 종로구");
+    let output = answer;
+  console.log(output);
+  </script>
+</body>
+</html>
