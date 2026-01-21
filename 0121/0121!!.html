@@ -1,9 +1,66 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
- <meta charset="UTF-8">
- <title></title>
+  <meta charset="UTF-8" />
+  <title>구구단 표</title>
 </head>
 <body>
+  <script>
+    const MIN_DAN = 2;
+    const MAX_DAN = 9;
+
+    let dan = null;
+
+    
+    while (true) {
+      const input = prompt(`출력할 단을 입력하세요 (${MIN_DAN}~${MAX_DAN})`);
+
+      if (input === null) {
+        document.body.innerHTML = `입력이 취소되었습니다.`;
+        break;
+      }
+
+      const n = Number(input);
+
+      if (Number.isNaN(n) || n < MIN_DAN || n > MAX_DAN) {
+        alert("2~9 사이의 숫자만 입력해야 합니다. 다시 입력해주세요.");
+      } else {
+        dan = n;
+        break;
+      }
+    }
+
+    
+    if (dan !== null) {
+      let rows = "";
+
+      for (let i = 1; i <= 9; i++) {
+        rows += `
+          <tr>
+            <td align="center">${dan} x ${i}</td>
+            <td align="center">${dan * i}</td>
+          </tr>
+        `;
+      }
+
+      document.body.innerHTML = `
+        <div class="box">
+          <div class="msg"><strong>${dan}단 구구단</strong></div>
+
+          <table border="1" cellspacing="0" width="500">
+            <thead>
+              <tr>
+                <th>식</th>
+                <th>결과</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+  </script>
 </body>
 </html>
