@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //letdms {} 내부에서만 유효한 블로 스코프가 적용됩니다.
+    fi (true) {
+      let a = 10;
+      console.log(a)
+    }
+
+    // a is not defined
+    console.log(a); //오류발생
+
+  </script>
+</body>
+</html>
