@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>String 객체</title>
+</head>
+
+<body>
+  <h3>String 객체의 메소드 활용</h3>
+  <hr />
+  <script>
+  let list = "";
+  
+  const jumin = prompt("주민번호를 입력하세요?", "031225-3912639");
+  
+  if (jumin === null) {
+    document.body.innerHTML += "<h1 style='color:red;'>입력이 취소되었습니다.</h1>";
+  } else {
+    const fail = () => {
+      document.body.innerHTML += "<div>형식에 맞지 않습니다.</div>";
+    };
+    
+    if (jumin.length !== 14) {
+      alert("주민번호의 길이는 14개 입니다.");
+      fail();
+    
+    } else {
+      const front = jumin.slice(0, 6);
+      const dash = jumin.slice(6, 7);
+      const back = jumin.slice(7);
+      const gender = jumin.slice(7, 8);
+      
+      if (Number.isNaN(Number(front))) {
+        alert("앞자리 형식을 확인하세요");
+        fail();
+      
+      } else if (dash !== "-") {
+        alert("앞자리 입력 후 -을 입력하세요");
+        fail();
+      
+      } else if (Number.isNaN(Number(back))) {
+        alert("뒷자리 형식을 확인하세요");
+        fail();
+      } else {
+        if (gender === "1" || gender === "3") {
+          list += "<div>남자</div>";
+          document.body.style.background = "#565698";
+          document.body.innerHTML += list;
+         } else if (gender === "2" || gender === "4") {
+          list += "<div>여자</div>";
+          document.body.style.background = "pink";
+          document.body.innerHTML += list;
+        } else {
+          alert("형식에 맞지 않습니다.");
+          fail();
+        }
+      }
+    }
+  }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<script>
+  let list = "";
+  let jumin;
+
+  do {
+    jumin = prompt("주민번호를 입력하세요?", "031225-3912639");
+
+    if (jumin === null) {
+      document.body.innerHTML += "<h1 style='color:red;'>입력이 취소되었습니다.</h1>";
+      break;
+    }
+
+    if (!/^[0-9]{6}-[0-9]{7}$/.test(jumin)) {
+      document.body.innerHTML += "<div>형식에 맞지 않습니다.</div>";
+    }
+
+  } while (jumin !== null && !/^[0-9]{6}-[0-9]{7}$/.test(jumin));
+
+  if (jumin !== null && /^[0-9]{6}-[0-9]{7}$/.test(jumin)) {
+    const gender = jumin.slice(7, 8);
+
+    if (gender === "1" || gender === "3") {
+      list += "<div>남자</div>";
+      document.body.style.background = "#565698";
+    } else if (gender === "2" || gender === "4") {
+      list += "<div>여자</div>";
+      document.body.style.background = "pink";
+    } else {
+      list += "<div>형식에 맞지 않습니다.</div>";
+    }
+
+    document.body.innerHTML += list;
+  }
+</script>

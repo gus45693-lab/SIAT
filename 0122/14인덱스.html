@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    const text = "Hello JavaScript";
+    for(let i = 0; i < text.length; i++){
+      console.log(`index=${i}, ${text[i]}`);
+    }
+
+    //slice(start, end) : start인덱스부터 end-1까지 잘라 새 문자열이 반환됩니다.
+    //음수 인덱스가 허용됩니다
+    result = text.slice(0, 5); //text 원본은 변하지 않습니다
+    console.log(text);
+    console.log(result); // "Hello"
+    console.log(result.length);
+
+    //slice(start, end)에서 end를 생략하면 start 인덱스부터 문자열 끝까지 모두 가져옵니다.
+    result=text.slice(6);
+    console.log(result); //"JavaScript"
+
+
+    for (let i = - 1; i >= -text.length; i--) {
+      console.log(`index=${i}, ${text[text.length +i]}`);
+    }
+
+    console.log(text.slice(-6));
+
+    console.log(text.slice(-6, -2));
+
+    console.log(text.substring(6));
+
+    console.log(text.substring(6,10));
+    
+  </script>
+</body>
+</html>
+
+

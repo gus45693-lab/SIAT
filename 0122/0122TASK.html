@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>String 객체의 메소드 활용</title>
+  <style>
+    @keyframes start {
+      0% { color: white; }
+      20% { color: red; }
+      40% { color: orange; }
+      60% { color: yellow; }
+      80% { color: green; }
+    }
+    div {
+      color: white;
+      font-family: "굴림";
+      font-size: 16px;
+      text-align: center;
+      font-weight: bold;
+      animation: start 6s infinite;
+    }
+  </style>
+</head>
+<body>
+  <h3>String 객체의 메소드 활용</h3>
+  <hr>
+  <script>
+    let reg = /^\d{6}-[1-4]\d{6}$/;
+
+    let pandan = false;
+    let jumin = "";
+
+    do {
+      jumin = prompt("주민번호를 입력하세요?", "810908-3234567");
+
+      if (jumin === null) {
+        document.body.innerHTML += "<h1 style='color:red;'>입력이 취소되었습니다.</h1>";
+        break;
+      }
+
+      pandan = reg.test(jumin);
+
+      if (!pandan) {
+        alert("주민번호 형식을 확인하세요");
+      }
+    } while (!pandan);
+
+   
+    if (jumin !== null && pandan) {
+      let list = "";
+
+      let test = jumin.slice(7, 8); 
+
+      const color = ["", "#565698", "pink", "#565698", "pink"];
+      const message = ["", "남자", "여자", "남자", "여자"];
+
+      document.body.style.background = color[test];
+      list += `<div>${jumin}은 ${message[test]}입니다.</div>`;
+
+      document.body.innerHTML += list;
+    }
+  </script>
+</body>
+</html>

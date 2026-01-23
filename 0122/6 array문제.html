@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    let input;
+
+    while(true) {
+      input = prompt("입력할 인원수를 입력하세요 (2~9)");
+
+      if( input === null){
+        document.body.innerHTML = "입력이 취소 되었습니다.";
+        break;
+      }
+      input = Number(input);
+
+      if (!Number.isNaN(input) && (input >= 2 && input <= input <= 9)) {
+        break;
+      }
+      alert("2~9 사이의 숫자만 입력해야 합니다. 다시 입력해주세요")
+    }
+
+    if(input !== null) {
+      const students = [];
+
+      for (let i =0)
+    }
+  </script>
+</body>
+</html>

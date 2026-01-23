@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>Strinig 객체</title>
+</head>
+<body>
+  <h3>String 객체의 메소드 활용</h3>
+  <hr />
+  <script>
+    let list = "";
+
+    //주민번호를 입력받아 남자와 여자에 따라 body 배경색을 설정합니다.
+    const jumin = prompt("주민번호를 입력하세요?", "031225-3912639")
+
+    let test = jumin.slice(7,8);
+    if (test === "1" || test === "3") {
+      list += "<div>남자</div>";
+      document.body.style.background = "#565698";
+    } else if (test === "2" || test === "4") {
+      list += "<div>여자</div>";
+      document.body.style.background = "mistyrose"
+    }
+
+    document.body.innerHTML += list;
+  </script>
+</body>
+</html>
