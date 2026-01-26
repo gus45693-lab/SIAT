@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    function getSum(a,b) {
+      consol.log(`a=${a}, b=${b}`);
+      
+      //초과된 인자들은 arguments 객체에서 확인할 수 있습니다.
+      console.log(`typeof arguments : ${typeof arguments}`);
+
+      //arguments는 모양은 배열과 비슷해서 length 속성과 인덱스로 접근할 수 있지만 배열은 아니고 유사 배열 객체입니다
+      //배열과 비슷하지만 배열을 다루는 모든 메서드를 가지고 있지 않습니다.
+      //함수 호출할 때 값을 넘기면 모두 이 객체 안에 차곡차곡 쌓입니다
+      for(let i = 0; i < arguments.length; i++){
+        console.log(`arguments[${i}]=$[arguments[i]]`)
+      }
+    }
+
+    //매개변수는 2개인데, 인자는 5개 전달
+    getSum(10, 20, 30, 40, 50);
+  </script>
+</body>
+</html>

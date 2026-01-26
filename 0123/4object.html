@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const saram = {
+      name: "유창현",
+      age: 24,
+      ki: 180.2,
+      blood: "O",
+      address: "부산진구 서전로"
+    };
+
+    let output = "";
+
+    for (const p in saram) { //for -in의 경우 반복될 때마다 새로운 p 변수를 새로 생성합니다
+      output += `saram.${p} = ${saram[p]}<br>`;
+    }
+
+      
+    document.body.innerHTML = output;
+    
+
+    // 객체 이름으로 메서드를 호출하면, 메서드 내부의 this는 그 객체 자신(saram)
+    
+  </script>
+</body>
+
+</html>

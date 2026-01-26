@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    h1{ text-align:center; color:rgb(160, 191, 160); margin: 30px 0 25px; }
+    .box{ width: 700px; margin: auto; }
+    table{ width: 100%; border-collapse: collapse; font-size: 30px; text-align: center; }
+    th, td{ border: 5px solid #bbb; padding: 18px 12px; }
+    th{ background: rgb(35, 112, 114); font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>신상 정보</h1>
+
+  <script>
+    const saram = {
+      name: "유창현",
+      age: 24,
+      ki: 180.2,
+      blood: "O",
+      address: "서울시 방구",
+
+      print: function () {
+        let rows = "";
+
+        for (const p in this) {
+          if (p !== "print") {
+            let value = this[p];
+            let unit = "";
+
+            switch (p) {
+              case "age":
+                unit = "세";
+                break;
+              case "blood":
+                unit = "형";
+                break;
+              case "ki":
+                unit = "cm";
+                break;
+            }
+
+            rows += `
+              <tr>
+                <td>saram.${p}</td>
+                <td>${value}${unit}</td>
+              </tr>
+            `;
+          }
+        }
+
+        document.body.innerHTML += `
+          <div class="box">
+            <table>
+              <thead>
+                <tr>
+                  <th>항목 (키: Key)</th>
+                  <th>내용 (값: value)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    };
+
+    saram.print();
+  </script>
+</body>
+</html>

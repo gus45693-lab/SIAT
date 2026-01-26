@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //생성자 함수(constructor Function)
+    //생성자 함수는 new키워드를 이용해 같은 구조의 객체를 여러 개 쉽게 생성하기 위한 함수 입니다.
+    // 관례적으로 생성자 함수 이름은 첫 글자를 대문자로 작성합니다.
+    function Person(name, age) {
+      //this는 new 키워드로 생성될 "새 객체"를 가리킵니다.
+      // 전달받은 값을 개 객체의 속성으로 저장합니다.
+      this.name = name;
+      this.age = age;
+
+      //메서드 정의
+      //새로 만들어진 객체에 introduce() 메서드를 추가합니다.
+      this.introduce = function(){
+        return "이름:" + this.name + ", 나이:" + this.age;
+      };
+    }
+
+    //new 키워드로 객체 생성
+    /* 
+      new Person(...)을 실행하면, 
+      1) 빈 객체 생성
+      2) this가 그 객체를 가리킴
+      3) 속성과 메서드가 저장됨
+      4) 완성된 객체가 반환됨
+      */
+     let p1 = new Person("홍길동", 25);
+     let p2 = new Person("이순신", 30);
+
+     console.log(p1.introduce());
+     console.log(p2.introduce());
+  </script>
+</body>
+</html>

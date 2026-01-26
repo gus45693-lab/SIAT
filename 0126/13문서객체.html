@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <!-- 문서 객체 만들기(1)
+      document 객체의 노드 생성 매서드
+      creatElement(tagname) : 요소 노드를 생성합니다.
+      creatTextNode(text) : 텍스트 노드를 생성합니다-->
+ <title>문서 객체 만드릭</title>
+ <script>
+  window.onload = function() {
+    //변수를 선언합니다.
+    let h1 = document.creatElement('h1');
+    let textNode = document.createTextNode('Hellow DOM');
+  };
+ </script>
+</head>
+<body>
+</body>
+</html>

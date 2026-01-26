@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>매개변수와 인자 갯수가 일치하지 않는 경우</title>
+</head>
+<body>
+  <script>
+    function profile(name, age, city) {
+      console.log("이름:", name);
+      console.log("나이:", age);
+      console.log("도시:", city);
+    }
+
+    //매개변수는 3개인데, 인자는 2개만 전달
+    profile("홍길동", 20);
+
+    /* 출력결과:
+    이름:홍길동
+    나이:20*/
+  </script>
+</body>
+</html>

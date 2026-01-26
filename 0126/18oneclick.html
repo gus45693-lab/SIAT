@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>INDEX</title>
+  <script>
+    window.onload = function () {
+      document.body.innerHTML = "<h2>클릭하면 펭귄이 나타나게 해주세요.</h2>";
+
+      window.onclick = function () {
+        let img = document.createElement('img');
+        img.src = 'Penguins.jpg';
+        img.width = 300;
+        img.height = 330;
+
+        document.body.appendChild(img);
+
+        window.onclick = null;
+      };
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>

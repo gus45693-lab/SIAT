@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>인자가 더 많은 경우 (매개변수 <인자)</title>
+</head>
+<body>
+  <script>
+    //나머지 매개변수 방식
+    //arg 앞에 선언된 변수(first, second)를 제외한 나머지만 배열로 만듭니다.
+    function getSum(first, second, ...args) {
+      console.log(`first = ${first}`);
+      console.log(`second = ${second}`);
+
+      for(a of args){
+        consols.log(a);
+      }
+    }
+
+    // 매개변수는 2개인데, 인자는 5개 전달
+    getSum(10, 20, 30, 40, 50);
+
+  </script>
+</body>
+</html>

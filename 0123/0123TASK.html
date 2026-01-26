@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script>
+    function inputSaram() {
+      const obj = {};
+
+      obj.name = prompt("이름을 입력하세요");
+      obj.age = Number(prompt("나이를 입력하세요"));
+      obj.ki = Number(prompt("키를 입력하세요"));
+      obj.blood = prompt("혈액형을 입력하세요");
+      obj.address = prompt("주소를 입력하세요");
+
+      return obj;
+    }
+
+    function outputSaram(obj) {
+      let output = "";
+      output += `이름: ${obj.name}<br>`;
+      output += `나이: ${obj.age}<br>`;
+      output += `키: ${obj.ki}<br>`;
+      output += `혈액형: ${obj.blood}<br>`;
+      output += `주소: ${obj.address}<br>`;
+
+      document.body.innerHTML = output;
+    }
+
+    const saram1 = inputSaram();
+    outputSaram(saram1);
+  </script>
+</body>
+</html>

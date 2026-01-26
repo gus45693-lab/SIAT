@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    // 클래스(Class)
+    // 클래스는 같은 구조의 객체를 만들기 위한 설계도입니다.
+    // new 키워드로 객체를 생성할 수 있습니다.
+    class Person {
+      // constructor는 객체가 생성될 때 자동으로 실행되는 초기화 메서드입니다.
+      constructor(name, age) {
+        // this는 새로 만들어진 객체를 가리킵니다.
+        this.name = name;
+        this.age = age;
+      }
+      
+      //클래스의 메서드는 prrtotype에 자동으로 등록됩니다.
+      //따라서 모든 객페가 메서드를 공유하여 사용합니다. (메모리 효율)
+      introduce(){
+        return "이름:" + this.name + ", 나이: " + this.age + " ,반 :" + this.ban;
+      }
+    }
+
+    // 공통 속성(공유 속성)을 prototype에 등록
+    // (class도 내부적으로 prototype을 사용합니다.)
+    Person.prototype.ban = "최고반";
+
+    //객체 생성
+    const p1 = new Person("홍길동", 25);
+    const p2 = new Person("이순신", 30);
+
+    console.log(p1.introduce());
+    console.log(p2.introduce());
+
+  </script>
+</body>
+</html>

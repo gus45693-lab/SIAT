@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title>인자가 더 많은 경우 (매개변수 < 인자)</title>
+</head>
+<body>
+  <script>
+    //나머지 매개변수(Rest parameter)방식
+    //자바스크립트 함수에서 인자의 개수가 매개변수보다 많을 때 나머지를 한꺼번에 받는 문법입니다.
+    function getSum(...args) {
+      console.log("---나머지 매개변수");
+      console.log("타입:", typeof args);
+      console.log("배열인가요?:", Array.isArray(args));
+      console.log(args)
+    }
+
+    // 매개변수는 1개인데, 인자는 5개 전달
+    getSum(10, 20, 30, 40, 50);
+  </script>
+</body>
+</html>

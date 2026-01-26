@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+ <style>
+  .change {
+    color:red;
+    background: yellow;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+ </style>
+ <script>
+  window.onclick = function () {
+    // getElementById()메소들르르 이용해서 원하는 요소 객ㅊ체에 접근할 수 있다.
+    const dom = document.getElementById("username");
+
+    //input요소의 value속성값을 콘솔에서 확인합니다.
+    console.log(dom.value);
+
+    const newValue = prompt("이름을 입력하세요", "");
+    //dom.value에 newValue변수값을 대입함으로써 <input>요소의
+    //value속성 값을 변경시킬 수 있다
+    dom.value = newValue;
+
+    //setAttribute(속성이름, 값)
+    //지정한 HTML 요소에 속성을 추가하거나 기존 속성을 변경합니다.
+    dom.setAttribute('class', 'change')
+  }
+ </script>
+</head>
+<body>
+  이름 : <input id="username" type="text" value="사용자의 이름은?" class="bold">
+</body>
+</html>

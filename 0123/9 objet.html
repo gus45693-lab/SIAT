@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    h1{ text-align:center; color:rgb(160, 191, 160); margin: 30px 0 25px; }
+    .box{ width: 700px; margin: auto; }
+    table{ width: 100%; border-collapse: collapse; font-size: 30px; text-align: center; }
+    th, td{ border: 5px solid #bbb; padding: 18px 12px; }
+    th{ background: rgb(35, 112, 114); font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>신상 정보</h1>
+
+  <script>
+    const saram = {
+      name: "유창현",
+      age: "24세",
+      ki: "180.2cm",
+      blood: "O형",
+      address: "서울시 방구",
+      job: {
+        company: "AI회사",
+        loc: "부산",
+        position: "개발자"
+      },
+
+      print: function () {
+        let rows = "";
+
+        for (const p in this) {
+          if (p !== "print") {
+
+            
+            switch (p) {
+              case "job":
+                for (const q in this.job) {  // job은 중첩개체여서 그냥 출력하면 별로여서 case job에서 한번더 포인으로 풀어 출력
+                  rows += `
+                    <tr>
+                      <td>saram.job.${q}</td>
+                      <td>${this.job[q]}</td>
+                    </tr>
+                  `;
+                }
+                break;
+
+              default: // 나머지는 전부 똑같이 출력해도 되니 defalt로 처리, job이 아닌 나머지는 값이 아닌 그냥 텍스트니깐 한줄로 출력하면 됨
+                rows += `
+                  <tr>
+                    <td>saram.${p}</td>
+                    <td>${this[p]}</td>
+                  </tr>
+                `;
+            }
+
+          }
+        }
+
+        document.body.innerHTML += `
+          <div class="box">
+            <table>
+              <thead>
+                <tr>
+                  <th>항목 (키: Key)</th>
+                  <th>내용 (값: value)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+    };
+
+    saram.print();
+  </script>
+</body>
+</html>

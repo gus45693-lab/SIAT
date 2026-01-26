@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //함수 표현식(function Expression)
+    //함수의 이름이 없기 때문에 익명함수라고 합니다
+    //anonymous function expression
+    let functionVar = function(){
+      const output = prompt('숫자를 입력하세요', '숫자');
+      alert("입력한 숫자 =" + output);
+    };
+    
+    //functionVar의 자료형 확인하고 내용 확인
+    console.log(`typeof(functionVar)=${typeof(functionVar)}\n${functionVar}`);
+    
+    //함수 자료형 변수명 뒤에 소괄호를 열고 닫으면 함수를 실행하게 됩니다.
+    //이를 "함수를 호출한다"라고 합니다.
+    functionVar();
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //객체 생성 방법
+    //1. new 연산자 이용하기
+    const saram = new Object(); //사용자 정의 객체 생성
+
+    //2. {} 이용하기
+    //const saram
+
+    //t생성된 객체에 속성 추가하기
+    saram.name = "유창현"
+    saram.age = 24;
+    saram.ki = 180.2;
+    saram.blood = "O"
+    saram.address = "부산진구 서전로" ;
+
+    let output = "";
+
+    //for...in문은 객체의 모든 속성 이름(key)을 순회합니다.
+    //p에는 속성 이름이 문자열 형태로 저장됩니다
+    for (const p in saram) { //p는 항상 문자열(string)입니다
+      output += `saram.${p}=${saram[p]}<br>`;
+    }
+      document.body.innerHTML = output;
+  </script>
+</body>
+</html>

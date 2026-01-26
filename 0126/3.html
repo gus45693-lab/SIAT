@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <!-- 지역 변수 output은 test() 함수가 호출될 때 생성 됩니다.
+       일반적으로 함수가 종료되면 지역 변수는 사라져야 합니다.
+      
+       하지만 test() 함수가 리턴한 내부 함수가 
+       외부 변수 output을 참조하고 있으므로, 
+       자바스크립트는 output 변수를 메모리에 계속 유지합니다.
+       
+       이처럼 하무가 외부 함수의 지역 변수를 기억하고 접근할 수 있는 현상을 
+       클로저(Closure)라고 부릅니다
+       또는 리턴된 내부 함수 자체를 클로저라고 부르기도 합니다.-->
+  <script>
+    //힘수를 선언합니다.
+    function test(name) {    //외부함수 (Outer Function)
+      const output = 'Hello' + name + '..!';
+      return function () {   //내부함수 (Inner Function)
+        console.log(output);
+      };
+    }
+    //함수 호출
+    const returnFunction = test('JavaScript');
+    console.log(`returnFunction=${returnFunction}`);
+    console.log(`output=${output}`); // output os noe defined
+    returnFunction();
+  </script>
+</body>
+
+</html>

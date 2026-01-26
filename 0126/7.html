@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //생성자 함수(constructor Function)
+    //생성자 함수는 new 키워드를 이용해 같은 구조의 객체를 여러 개 쉽게 생성하기 위한 함수 입니다.
+    // 관례적으로 생성자 함수 이름은 첫 글자를 대문자로 작성합니다.
+    function Person(name, age) {
+      //this는 new 키워드로 생성될 "새 객체"를 가리킵니다.
+      // 전달받은 값을 개 객체의 속성으로 저장합니다.
+      this.name = name;
+      this.age = age;
+    }
+     // 자바스크립트에서 모든 함수는 prototype 속성을 자동으로 가집ㅂ니다.
+     // prototype에 속성과 메서드를 추가하면,
+     // new 키워드로 생성된 모든 객체가 해당 속성과 메서드를 공통으로 공유하여 사용합니다.
+     Person.prototype.ban = "최고반";
+
+     // prototype에 메서드 동록
+     // prototype 없이 생성자 내부에 메서드를 정의하면 객체를 생성할 때마다 새로운 함수가 매번 만들어집니다.
+     // prototype에 메서드를 정의하면 함수는 한 번만 생성되고 모든 객체가 공유하여 사용합니다.
+     // => 메모리 효율이 좋아집니다.
+     Person.prototype.introduce = function() {
+      return "이름:" + this.name + ", 나이: " + this.age + "반:" + this.ban
+     };
+
+     let p1 = new Person("홍길동", 25);
+     let p2 = new Person("이순신", 30);
+
+     console.log(p1.introduce()); // 최고반
+     console.log(p2.introduce()); // 최고반
+  </script>
+</body>
+</html>

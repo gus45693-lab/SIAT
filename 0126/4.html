@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <!-- 문제
+       1. 함수 creatCounter()를 이용해서 카운터 역할을 하도록 합니다.
+       2. 만약 creatCounter()를 다시 호출하면 카운터는 1부터 다시 시작합니다.
+       -->
+  <script>
+    function creatCounter() {
+      let count = 0; // 외부 함수에 선언된 변수(비공개 데이터)
+      
+      // 내부 함수를 리턴합니다.
+      return function(){
+        return ++count;
+      };      
+    }
+
+    // creatCounter()를 한 번 호출해서 '카운터 함수'를 만듭니다.
+    const myCounter = creatCounter();
+
+    console.log(myCounter());
+    console.log(myCounter());
+    console.log(myCounter());
+
+    // creatCounter()를 다시 호출하면 새로운 count가 생성되어 독립적으로 동작합니다
+    const yourCounter = creatCounter();
+    console.log(yourCounter());
+    console.log(yourCounter());
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    const fruits = ["사과", "배", "바나나"]
+
+    let output = "";
+    fruits.forEach(function(item, index){
+      output += `index=${index}, item=${item}<br>`;
+    });
+
+    document.body.innerHTML = output;
+  </script>
+</body>
+</html>

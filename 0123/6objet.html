@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const saram = {
+      name: "유창현",
+      age: 24,
+      ki: 180.2,
+      blood: "O",
+      address: "부산진구 서전로",
+      print: function () {
+        let output = "";
+        for (const p in this) {
+          if (p !== 'print') {
+            output += `${p}=${this[p]}<br>;
+          }
+        }
+          document.body.innerHTML = output;
+      }
+    };
+
+    
+    saram.print();
+    
+  </script>
+</body>
+
+</html>

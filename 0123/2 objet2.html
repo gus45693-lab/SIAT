@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    //객체 생성 방법
+    //1. new 연산자 이용하기
+    const saram = new Object(); //사용자 정의 객체 생성
+
+    //2. {} 이용하기
+    //const saram
+
+    //t생성된 객체에 속성 추가하기
+    saram.name = "유창현"
+    saram.age = 24;
+    saram.ki = 180.2;
+    saram.blood = "O"
+    saram.address = "부산진구 서전로" ;
+    
+    //메서드 만들기
+    //객체.메서드명=funtion(){};
+
+    saram.print=function(){
+      let output = "";
+      for(const p in this){ //for -in의 경우 반복될 때마다 새로운 p 변수를 새로 생성합니다
+        output += `${p}=${this[p]}<br>`;
+      }
+      document.body.innerHTML = output;
+    };
+
+    // 객체 이름으로 메서드를 호출하면, 메서드 내부의 this는 그 객체 자신(saram)
+    saram.print();
+  </script>
+</body>
+</html>
+

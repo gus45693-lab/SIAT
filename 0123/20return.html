@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+</head>
+<body>
+  <script>
+    function getSum(start, end) {
+      let sum = 0;
+      for (let i = start; i <= end; i++){
+        sum += i;
+      }
+      return; //아무 값도 리턴하지 않고 호출한 곳으로 돌아갑니다
+    }
+    const returnResult = getSum(1, 100); //retrunResult에는 돌려받은 값이 없습니다
+    alert(typeof (returnResult) + ' : ' + returnResult); //
+  </script>
+</body>
+</html>
